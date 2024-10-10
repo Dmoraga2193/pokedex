@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 31);
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+.header{
+    width: 100vw;
+    min-width: 375px;
+    height: auto;
+    padding: 40px 0 40px 0;
+    background-image: url(/img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header--img{
+    width: 300px;
+}
+
+.header--search{
+    width: 200px;
+    height: 30px;
+    padding: 6px;
+    margin-top: 60px;
+    display: inherit;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.header--search--icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(/img/icons/search.svg)no-repeat;
+}
+
+.header--search--input{
+    width: 80%;
+    height: 90%;
+    border: none;
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+
+
+.main{
+    width: 100vw;
+    min-width: 375px;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    background-color:white;
+    border-radius: 50px 50px 0 0;
+}
+
+.article{
+    width: 100vw;
+    min-width: 375px;
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    background-color: rgb(161, 204, 233);
+}
+
+.article-green{
+    background-color: rgb(233, 211, 87);
+    flex-direction: row-reverse;
+    
+
+}
+
+.article--div{
+    position: relative;
+    width: 150px;
+}
+
+.article--div--circle{
+    width: 150px;
+    height: 150px;
+    margin:20px  0;
+    opacity: 40%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.article--img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:30px;
+
+}
+
+.article--div--info{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.247);
+    border-radius: 8px;
+    padding: 20px;
+}
+.article--div--info--titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin:10px auto;
+}
+.article--div--info--p{
+    text-align: justify;
+}
+
+
+.footer{
+    width: 100vw;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(156, 3, 3);
+    color: white;
+    font-size: .8rem;
+}
+.footer--icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(/img/icons/pokeball.png)center;
+    background-size: cover;
+}
+
+@media(min-width: 820px){
+    .main{
+        padding: 140px;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 50px;
+    }
+
+    .article{
+        width: auto;
+        min-width: 200px;
+        max-width: 340px;
+        height: 500px;
+        flex-wrap: wrap;
+        border-radius: 30px 30px 10px 10px;
+        box-shadow: -1px 1px 10px -4px rgba(0,0,0,0.75);
+        transition: height  1s;
+    }
+    .article:hover{
+        height: 510px;
+
+    }
+    .article--div{
+        margin: auto;
+        padding-left: 10px;
+    }
+    .article--div--info{
+        height: 200px;
+        margin: auto;
+    }
+}
